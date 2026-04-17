@@ -1,0 +1,16 @@
+<svg width="420" height="140" viewBox="0 0 420 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="40" y1="10" x2="190" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3CC59"/>
+      <stop offset="1" stop-color="#B8870B"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="140" rx="18" fill="#040404"/>
+  <path d="M87 18C54 47 39 72 39 92C39 115 56 128 80 128H125C100 119 87 105 87 82C87 58 102 42 124 28L103 18H87Z" fill="url(#gold)"/>
+  <path d="M118 30C98 46 88 61 88 78C88 94 98 108 115 120C95 98 95 67 121 40L118 30Z" fill="#040404"/>
+  <path d="M136 24C151 37 162 51 171 69C179 86 183 102 181 121C195 102 197 80 188 59C180 40 165 26 144 16L136 24Z" fill="url(#gold)"/>
+  <path d="M170 16C183 23 194 34 200 48C205 60 206 72 202 84C216 71 223 53 220 39C216 23 203 11 185 8L170 16Z" fill="url(#gold)"/>
+  <path d="M159 28C169 35 177 43 183 53C188 62 190 71 188 81C197 69 200 57 197 46C194 34 186 24 173 18L159 28Z" fill="#040404"/>
+  <text x="228" y="84" fill="#D4AF37" font-family="'Playfair Display', serif" font-size="34" font-weight="700">OMD Hairville</text>
+  <text x="228" y="108" fill="#A68625" font-family="Poppins, sans-serif" font-size="12" letter-spacing="3">PREMIUM WIG BOUTIQUE</text>
+</svg>

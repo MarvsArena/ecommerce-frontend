@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-black: #050505;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-light: #f2cf67;
+  --color-brand-ivory: #f7f1e4;
+  --color-brand-nude: #d8c4a7;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+:root {
+  color: #111111;
+  background: #fbf6ee;
+  color-scheme: light;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.16), transparent 28%),
+    radial-gradient(circle at 100% 20%, rgba(216, 196, 167, 0.18), transparent 26%),
+    linear-gradient(180deg, #fdf7ef 0%, #f7efe2 50%, #f3e9da 100%);
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.14), transparent 28%),
+    radial-gradient(circle at 100% 25%, rgba(216, 196, 167, 0.12), transparent 22%),
+    linear-gradient(180deg, #070707 0%, #030303 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.12), transparent 25%),
+    radial-gradient(circle at 85% 40%, rgba(216, 196, 167, 0.18), transparent 22%);
+}
+
+html.dark .page-glow {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.12), transparent 25%),
+    radial-gradient(circle at 85% 40%, rgba(216, 196, 167, 0.08), transparent 22%);
+}
+
+@layer base {
+  body {
+    @apply text-slate-950 antialiased dark:text-white;
+  }
+
+  img {
+    @apply block;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-gold px-6 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-brand-gold-light;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/75 px-6 py-3 text-sm font-medium text-slate-900 shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-0.5 hover:border-brand-gold/35 hover:text-brand-gold dark:border-white/15 dark:bg-white/[0.03] dark:text-white dark:shadow-none;
+  }
+
+  .input-field {
+    @apply w-full rounded-[1.2rem] border border-black/10 bg-white/90 px-4 py-3 text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-brand-gold/60 focus:ring-2 focus:ring-brand-gold/10 dark:border-white/10 dark:bg-black/40 dark:text-white dark:placeholder:text-white/35;
+  }
+
+  .luxury-panel {
+    @apply rounded-[2rem] border border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.72))] shadow-[0_30px_120px_rgba(15,23,42,0.12)] backdrop-blur-sm dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] dark:shadow-[0_30px_120px_rgba(0,0,0,0.35)];
+  }
+
+  .auth-helper-link {
+    @apply mt-10 block text-sm text-slate-600 dark:text-white/55;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm text-slate-600 dark:text-white/65;
+  }
+
+  .surface-card {
+    @apply rounded-[1.5rem] border border-black/10 bg-white/72 dark:border-white/10 dark:bg-white/[0.03];
+  }
+
+  .surface-card-strong {
+    @apply rounded-[1.5rem] border border-brand-gold/15 bg-[#f6eedf]/88 dark:border-white/10 dark:bg-black/30;
+  }
+
+  .panel-highlight {
+    @apply rounded-[2.5rem] border border-brand-gold/20 bg-[linear-gradient(135deg,rgba(212,175,55,0.14),rgba(255,255,255,0.92))] shadow-[0_30px_120px_rgba(15,23,42,0.12)] dark:bg-[linear-gradient(135deg,rgba(212,175,55,0.12),rgba(5,5,5,0.96))] dark:shadow-[0_30px_120px_rgba(0,0,0,0.35)];
+  }
+
+  .alert-error {
+    @apply rounded-2xl border border-rose-500/20 bg-rose-500/10 px-4 py-3 text-sm text-rose-700 dark:text-rose-200;
+  }
+
+  .alert-success {
+    @apply rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-700 dark:text-emerald-200;
+  }
+}
