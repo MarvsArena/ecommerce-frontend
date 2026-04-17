@@ -16,7 +16,7 @@ const adminLinks = [
     end: true,
   },
   {
-    to: "/admin/api/products",
+    to: "/admin/products",
     label: "Products",
     icon: PackageIcon,
   },
