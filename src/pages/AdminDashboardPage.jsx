@@ -151,7 +151,7 @@ const AdminDashboardPage = () => {
           <div className="mt-6 space-y-4">
             {[
               {
-                to: "/admin/products",
+                to: "/admin/api/products",
                 title: "Manage Products",
                 description: "Create, edit, and keep stock levels accurate.",
               },
@@ -212,7 +212,7 @@ const AdminDashboardPage = () => {
         <Reveal className="luxury-panel p-7" variant="slideLeft">
           <div className="flex items-center justify-between">
             <h2 className="font-display text-3xl text-slate-950 dark:text-white">Low Stock Attention</h2>
-            <Link to="/admin/products" className="button-secondary">
+            <Link to="/admin/api/products" className="button-secondary">
               Open Products
             </Link>
           </div>

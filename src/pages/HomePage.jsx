@@ -33,8 +33,13 @@ const HomePage = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const data = await getProducts({ featured: true, limit: 4 });
-        setFeaturedProducts(data);
+        const allProducts = await getProducts();
+
+const featured = allProducts
+  .filter((p) => p.featured)
+  .slice(0, 4);
+
+setFeaturedProducts(featured);
         setError("");
       } catch (requestError) {
         setError(requestError.response?.data?.message || "Unable to load featured products right now.");
